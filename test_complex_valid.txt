@@ -1,0 +1,43 @@
+// Test 8: Complex valid program
+// Should pass all scope checks
+
+int global1 = 10;
+int global2 = 20;
+
+function int add(int x, int y) {
+    return x + y;
+}
+
+function int factorial(int n) {
+    int result = 1;
+    int i = 1;
+    
+    while (i <= n) {
+        result = result * i;
+        i = i + 1;
+    }
+    
+    return result;
+}
+
+function int complexFunction(int a, int b) {
+    int sum = add(a, b);
+    int product = a * b;
+    
+    if (sum > 10) {
+        int temp = sum + product;
+        return temp;
+    } else {
+        int temp = sum - product;
+        return temp;
+    }
+}
+
+function int main() {
+    int x = 5;
+    int y = 10;
+    int result = complexFunction(x, y);
+    int fact = factorial(result);
+    
+    return fact;
+}

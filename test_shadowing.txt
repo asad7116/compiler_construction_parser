@@ -1,0 +1,15 @@
+// Test 5: Variable shadowing (should work - not an error in C)
+// Inner scope variables can shadow outer scope
+
+int globalVar = 100;
+
+function int shadowTest() {
+    int x = 5;
+    
+    if (x > 0) {
+        int x = 10;
+        return x;
+    }
+    
+    return x;
+}

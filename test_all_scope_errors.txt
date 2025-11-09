@@ -1,0 +1,36 @@
+// Test program with intentional scope errors
+
+int globalVar;
+
+function int add(int a, int b) {
+    return a + b;
+}
+
+function int main() {
+    int x;
+    
+    // OK: Use global variable
+    globalVar = 5;
+    
+    // OK: Use local variable
+    x = 10;
+    
+    // OK: Call declared function
+    x = add(3, 4);
+    
+    // ERROR: Use undeclared variable
+    y = 20;
+    
+    // ERROR: Call undefined function
+    x = subtract(10, 5);
+    
+    return 0;
+}
+
+// ERROR: Redeclare global variable
+int globalVar;
+
+// ERROR: Function redefinition
+function int add(int x, int y) {
+    return x + y;
+}

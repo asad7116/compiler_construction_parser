@@ -1,0 +1,8 @@
+// Test 2: UndefinedFunctionCalled
+// Calling a function that doesn't exist
+
+function int test2() {
+    int x = 5;
+    int result = undefinedFunction(x, 10);  // ERROR: undefinedFunction not defined
+    return result;
+}

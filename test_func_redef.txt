@@ -1,0 +1,10 @@
+// Test 4: FunctionPrototypeRedefinition
+// Defining the same function twice
+
+function int duplicate() {
+    return 1;
+}
+
+function int duplicate() {  // ERROR: duplicate already defined
+    return 2;
+}

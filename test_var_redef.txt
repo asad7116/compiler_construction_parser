@@ -1,0 +1,9 @@
+// Test 3: VariableRedefinition
+// Declaring the same variable twice in the same scope
+
+function int test3() {
+    int x = 5;
+    int y = 10;
+    int x = 15;  // ERROR: x already declared in this scope
+    return x + y;
+}

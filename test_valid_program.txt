@@ -1,0 +1,20 @@
+int globalVar;
+
+function int add(int a, int b) {
+    int sum;
+    sum = a + b;
+    return sum;
+}
+
+function int main() {
+    int x;
+    int y;
+    
+    globalVar = 5;
+    x = 10;
+    y = 20;
+    
+    x = add(y, globalVar);
+    
+    return 0;
+}

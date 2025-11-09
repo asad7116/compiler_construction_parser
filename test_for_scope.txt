@@ -1,0 +1,9 @@
+// Test 7: For loop scope - variable declared in for init
+
+function int forLoopTest() {
+    for (int i = 0; i < 10; i = i + 1;) {
+        int temp = i * 2;
+    }
+    
+    return i;  // ERROR: i doesn't exist outside for loop
+}

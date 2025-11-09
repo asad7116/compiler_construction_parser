@@ -1,11 +1,60 @@
-fn add(int a, int b) {
-    int result = a + b;
+// Test program for parser validation
+
+// Global variable declarations
+int globalCounter = 0;
+int maxValue = 100;
+float pi = 3.14;
+
+// Simple function with return value
+function int add(int x, int y) {
+    return x + y;
+}
+
+// Function with multiple statements
+function int factorial(int n) {
+    int result = 1;
+    int i = 1;
+    
+    while (i <= n) {
+        result = result * i;
+        i = i + 1;
+    }
+    
     return result;
 }
 
-fn main() {
-    int x = 5;
-    int y = 10;
-    int sum = add(x, y);
-    return sum;
+// Function with if-else
+function int max(int a, int b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// Function with for loop
+function void countToTen() {
+    for (int i = 0; i < 10; i = i + 1;) {
+        if (i == 5) {
+            break;
+        }
+    }
+}
+
+// Function with complex expressions
+function int calculate(int x, int y, int z) {
+    int temp1 = x * y + z;
+    int temp2 = (x + y) * z;
+    int result = temp1 - temp2;
+    return result;
+}
+
+// Main function
+function int main() {
+    int a = 5;
+    int b = 10;
+    int sum = add(a, b);
+    int maximum = max(a, b);
+    
+    return 0;
 }

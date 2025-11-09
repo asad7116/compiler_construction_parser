@@ -1,0 +1,8 @@
+// Test 1: UndeclaredVariableAccessed
+// Using a variable that was never declared
+
+function int test1() {
+    int a = 5;
+    int b = undeclaredVar + 10;  // ERROR: undeclaredVar not declared
+    return b;
+}

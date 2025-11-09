@@ -1,0 +1,12 @@
+// Test 6: Block scope - variable ceases to exist after block
+
+function int blockScopeTest() {
+    int result = 0;
+    
+    while (result < 5) {
+        int temp = 42;
+        result = temp;
+    }
+    
+    return temp;
+}
